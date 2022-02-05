@@ -1,0 +1,110 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+:root{
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body{
+    font-family: "Spartan",sans-serif;
+}
+
+main h1,
+.stars p{
+    color: var(--very-dark-magenta);
+}
+
+.stars img{
+    margin-right: 10px;
+}
+
+.references .card{
+    background-color: var(--very-dark-magenta);
+    padding: 40px 20px;
+    border-radius: 10px;
+}
+
+.references .card h3{
+    color: #fff;
+}
+
+.references .card small{
+    color: var(--soft-pink);
+}
+
+.references .card p{
+    color: #fff;
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;  
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media(min-width:768px){
+
+    main{
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .stars{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+
+    .references{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+    }
+
+}
+
+@media(min-width: 1024px){
+
+    .upper{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .stars{
+        display: inline-block;
+    }
+
+    .stars > div:nth-child(2){
+        transform: translateX(5%);
+    }
+
+    .stars > div:nth-child(3){
+        transform: translateX(10%);
+    }
+
+    main{
+        max-width: auto;
+    }
+
+    main h1{
+        font-size: 46px;
+    }
+
+    .references > div:nth-child(2){
+        transform: translateY(+10%);
+    }
+
+    .references > div:nth-child(3){
+        transform: translateY(+20%);
+    }
+
+
+}
